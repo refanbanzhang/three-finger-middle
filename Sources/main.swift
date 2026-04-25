@@ -187,7 +187,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   private func setupStatusItem() {
-    statusItem.button?.title = "3M"
+    guard let button = statusItem.button else { return }
+    button.imageScaling = .scaleProportionallyDown
+
+    if let image = loadMenuBarIcon() {
+      button.image = image
+      button.imagePosition = .imageOnly
+      button.title = ""
+      button.toolTip = "ThreeFingerMiddle"
+    } else {
+      button.image = nil
+      button.title = "3M"
+    }
 
     let menu = NSMenu()
     menu.addItem(withTitle: "ThreeFingerMiddle is running", action: nil, keyEquivalent: "")
@@ -215,6 +226,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     menu.addItem(quit)
 
     statusItem.menu = menu
+  }
+
+  private func loadMenuBarIcon() -> NSImage? {
+    guard let url = Bundle.main.url(forResource: "MenuBarIconTemplate", withExtension: "png"),
+          let image = NSImage(contentsOf: url) else {
+      return nil
+    }
+
+    image.isTemplate = true
+    image.size = NSSize(width: 16, height: 16)
+    return image
   }
 
   private func startRecognizer() {

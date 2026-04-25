@@ -11,6 +11,8 @@ RESOURCES_DIR="$CONTENTS_DIR/Resources"
 MODULES_DIR="$ROOT_DIR/Modules"
 MODULE_CACHE_DIR="${SWIFT_MODULE_CACHE_DIR:-$BUILD_DIR/module-cache}"
 
+python3 "$ROOT_DIR/scripts/generate_icons.py"
+
 rm -rf "$APP_DIR"
 rm -rf "$MODULE_CACHE_DIR"
 mkdir -p "$MACOS_DIR" "$RESOURCES_DIR"
@@ -30,6 +32,7 @@ swiftc \
 
 cp "$ROOT_DIR/Info.plist" "$CONTENTS_DIR/Info.plist"
 cp "$ROOT_DIR/Resources/AppIcon.icns" "$RESOURCES_DIR/AppIcon.icns"
+cp "$ROOT_DIR/Resources/MenuBarIconTemplate.png" "$RESOURCES_DIR/MenuBarIconTemplate.png"
 codesign --force --deep --sign - "$APP_DIR" >/dev/null
 
 echo "$APP_DIR"
