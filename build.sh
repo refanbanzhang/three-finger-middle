@@ -32,7 +32,7 @@ swiftc \
 
 cp "$ROOT_DIR/Info.plist" "$CONTENTS_DIR/Info.plist"
 cp "$ROOT_DIR/Resources/AppIcon.icns" "$RESOURCES_DIR/AppIcon.icns"
-cp "$ROOT_DIR/Resources/MenuBarIconTemplate.png" "$RESOURCES_DIR/MenuBarIconTemplate.png"
+cp "$ROOT_DIR/Resources/MenuBarIcon/menu-bar-full-template-master.png" "$RESOURCES_DIR/menu-bar-full-template-master.png"
 codesign --force --deep --sign - "$APP_DIR" >/dev/null
 
 echo "$APP_DIR"

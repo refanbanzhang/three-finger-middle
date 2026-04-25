@@ -229,13 +229,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   private func loadMenuBarIcon() -> NSImage? {
-    guard let url = Bundle.main.url(forResource: "MenuBarIconTemplate", withExtension: "png"),
+    guard let url = Bundle.main.url(forResource: "menu-bar-full-template-master", withExtension: "png"),
           let image = NSImage(contentsOf: url) else {
       return nil
     }
 
     image.isTemplate = true
-    image.size = NSSize(width: 16, height: 16)
+    image.size = NSSize(width: 18, height: 18)
     return image
   }
 

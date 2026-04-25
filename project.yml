@@ -1,0 +1,47 @@
+name: ThreeFingerMiddle
+
+options:
+  minimumXcodeGenVersion: 2.45.0
+  deploymentTarget:
+    macOS: "13.0"
+
+settings:
+  base:
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    SWIFT_VERSION: "5.0"
+
+targets:
+  ThreeFingerMiddle:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Sources
+      - path: Resources/AppIcon.icns
+        buildPhase: resources
+      - path: Resources/MenuBarIcon/menu-bar-full-template-master.png
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_NAME: ThreeFingerMiddle
+        PRODUCT_BUNDLE_IDENTIFIER: local.rfbz.ThreeFingerMiddle
+        INFOPLIST_FILE: Info.plist
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+        DEVELOPMENT_TEAM: ""
+        SWIFT_INCLUDE_PATHS: "$(SRCROOT)/Modules"
+        FRAMEWORK_SEARCH_PATHS:
+          - "$(inherited)"
+          - "/System/Library/PrivateFrameworks"
+        OTHER_LDFLAGS:
+          - "$(inherited)"
+          - "-framework"
+          - "MultitouchSupport"
+
+schemes:
+  ThreeFingerMiddle:
+    build:
+      targets:
+        ThreeFingerMiddle: all
+    run:
+      config: Debug
