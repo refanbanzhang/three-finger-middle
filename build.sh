@@ -7,12 +7,13 @@ BUILD_DIR="$ROOT_DIR/build"
 APP_DIR="$BUILD_DIR/$APP_NAME.app"
 CONTENTS_DIR="$APP_DIR/Contents"
 MACOS_DIR="$CONTENTS_DIR/MacOS"
+RESOURCES_DIR="$CONTENTS_DIR/Resources"
 MODULES_DIR="$ROOT_DIR/Modules"
 MODULE_CACHE_DIR="${SWIFT_MODULE_CACHE_DIR:-$BUILD_DIR/module-cache}"
 
 rm -rf "$APP_DIR"
 rm -rf "$MODULE_CACHE_DIR"
-mkdir -p "$MACOS_DIR"
+mkdir -p "$MACOS_DIR" "$RESOURCES_DIR"
 
 swiftc \
   -O \
@@ -28,6 +29,7 @@ swiftc \
   -o "$MACOS_DIR/$APP_NAME"
 
 cp "$ROOT_DIR/Info.plist" "$CONTENTS_DIR/Info.plist"
+cp "$ROOT_DIR/Resources/AppIcon.icns" "$RESOURCES_DIR/AppIcon.icns"
 codesign --force --deep --sign - "$APP_DIR" >/dev/null
 
 echo "$APP_DIR"
