@@ -8,13 +8,15 @@ APP_DIR="$BUILD_DIR/$APP_NAME.app"
 CONTENTS_DIR="$APP_DIR/Contents"
 MACOS_DIR="$CONTENTS_DIR/MacOS"
 MODULES_DIR="$ROOT_DIR/Modules"
+MODULE_CACHE_DIR="${SWIFT_MODULE_CACHE_DIR:-$BUILD_DIR/module-cache}"
 
 rm -rf "$APP_DIR"
+rm -rf "$MODULE_CACHE_DIR"
 mkdir -p "$MACOS_DIR"
 
 swiftc \
   -O \
-  -module-cache-path "$BUILD_DIR/module-cache" \
+  -module-cache-path "$MODULE_CACHE_DIR" \
   -I "$MODULES_DIR" \
   -F /System/Library/PrivateFrameworks \
   -framework AppKit \

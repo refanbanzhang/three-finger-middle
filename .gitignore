@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Build outputs
+build/
+*.app/
+*.dmg
+
+# Logs
+*.log
+
+# Swift and Xcode local state
+.build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# Temporary files
+*.tmp
+*.swp

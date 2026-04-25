@@ -11,6 +11,12 @@ A tiny local macOS app that does one thing:
 ./build.sh
 ```
 
+## Package DMG
+
+```bash
+./package-dmg.sh
+```
+
 ## Run
 
 ```bash

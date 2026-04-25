@@ -1,167 +1,27 @@
 [ThreeFingerMiddle] accessibility trusted: false
 [ThreeFingerMiddle] registered 1 multitouch device(s)
-[ThreeFingerMiddle] accessibility trusted: false
 [ThreeFingerMiddle] registered 1 multitouch device(s)
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1385,45
-[ThreeFingerMiddle] accessibility trusted: true
-[ThreeFingerMiddle] registered 1 multitouch device(s)
+[ThreeFingerMiddle] posting middle click at 1373,36
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1404,46
+[ThreeFingerMiddle] posting middle click at 1378,45
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1201,44
+[ThreeFingerMiddle] posting middle click at 1177,50
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1356,43
+[ThreeFingerMiddle] posting middle click at 1221,50
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1142,45
+[ThreeFingerMiddle] posting middle click at 1202,47
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1135,47
+[ThreeFingerMiddle] posting middle click at 1198,43
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1138,43
+[ThreeFingerMiddle] posting middle click at 1112,51
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1169,49
+[ThreeFingerMiddle] posting middle click at 1192,45
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 751,37
+[ThreeFingerMiddle] posting middle click at 402,44
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1304,47
+[ThreeFingerMiddle] posting middle click at 945,45
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1217,39
+[ThreeFingerMiddle] posting middle click at 921,47
 [ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1200,44
-[ThreeFingerMiddle] gesture recognized, posting middle click
-[ThreeFingerMiddle] posting middle click at 1200,44
-[ThreeFingerMiddle] accessibility trusted: false
-[ThreeFingerMiddle] registered 1 multitouch device(s)
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] manual test requested from menu
-[ThreeFingerMiddle] posting middle click at 1440,99
-[ThreeFingerMiddle] manual test requested from menu
-[ThreeFingerMiddle] posting middle click at 1425,91
-[ThreeFingerMiddle] registered 1 multitouch device(s)
-[ThreeFingerMiddle] accessibility trusted: false
-[ThreeFingerMiddle] registered 1 multitouch device(s)
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] registered 1 multitouch device(s)
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 2/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 1/3
-[ThreeFingerMiddle] gesture rejected, valid touch count 0/3
+[ThreeFingerMiddle] posting middle click at -851,163
