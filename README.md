@@ -1,8 +1,8 @@
 # ThreeFingerMiddle
 
-一个轻量级的 macOS 应用，将三指轻点触控板的手势转换为鼠标中键点击。
+我很喜欢 Windows 上三指轻触触控板来模拟鼠标中键点击的功能——关闭浏览器标签页、打开链接到新标签页都非常方便。切换到 macOS 后，这个便利的手势却消失了。于是，ThreeFingerMiddle 诞生了：将这个好用的手势带到 macOS 触控板。
 
-A lightweight macOS app that converts a three-finger tap on the trackpad into a middle mouse click.
+I loved Windows' three-finger light tap that simulates a middle mouse click—so handy for closing browser tabs, opening links in new tabs. When I switched to macOS, I missed that convenient gesture. So ThreeFingerMiddle was born: bringing that useful gesture to the macOS trackpad.
 
 ## 🌐 官方网站 / Official Website
 
