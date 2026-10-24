@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreeFingerMiddle - 三指轻点模拟中键</title>
+    <meta name="description" content="ThreeFingerMiddle 是一个轻量级 macOS 应用，将三指轻点触控板的手势转换为鼠标中键点击。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .section p, .section li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .section ul {
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.3em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .version {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 0 5px;
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .lang-btn:hover {
+            background: #e9ecef;
+        }
+
+        .lang-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .download-btn {
+                padding: 15px 40px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ThreeFingerMiddle</h1>
+            <p id="tagline">三指轻点，模拟中键</p>
+            <span class="version">v0.1.0</span>
+        </div>
+
+        <div class="content">
+            <div class="lang-switch">
+                <span class="lang-btn active" onclick="switchLang('zh')">中文</span>
+                <span class="lang-btn" onclick="switchLang('en')">English</span>
+            </div>
+
+            <!-- Chinese Content -->
+            <div class="lang-content active" id="zh-content">
+                <div class="section">
+                    <h2>为什么做 ThreeFingerMiddle？</h2>
+                    <p>我很喜欢 Windows 上三指轻触触控板来模拟鼠标中键点击的功能——关闭浏览器标签页、打开链接到新标签页都非常方便。切换到 macOS 后，这个便利的手势却消失了。</p>
+                    <p>于是，ThreeFingerMiddle 诞生了。它将这个好用的手势带到 macOS 触控板：<strong>三指轻点</strong>即可触发<strong>中键点击</strong>。轻量、本地运行，开箱即用。</p>
+                </div>
+
+                <div class="section">
+                    <h2>功能特点</h2>
+                    <ul>
+                        <li>✨ 简单直观：三指轻点触控板，自动模拟中键点击</li>
+                        <li>🪶 轻量高效：纯本地运行，不占用系统资源</li>
+                        <li>🔒 隐私安全：不联网，不收集任何数据</li>
+                        <li>🎯 精准定位：在当前光标位置触发中键事件</li>
+                        <li>🚀 开箱即用：安装后即可使用，无需复杂配置</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>如何安装？</h2>
+                    <p><strong>系统要求：</strong>macOS 13.0 或更高版本</p>
+                    <ul>
+                        <li>1. 点击下方按钮下载 DMG 安装包</li>
+                        <li>2. 双击打开 DMG 文件</li>
+                        <li>3. 将 ThreeFingerMiddle 拖入「应用程序」文件夹</li>
+                        <li>4. 首次运行时，系统会要求授予「辅助功能」权限</li>
+                        <li>5. 前往「系统偏好设置 → 隐私与安全性 → 辅助功能」，勾选 ThreeFingerMiddle</li>
+                        <li>6. 完成！现在你可以使用三指轻点来触发中键点击了</li>
+                    </ul>
+                </div>
+
+                <div class="cta-section">
+                    <h2>立即下载</h2>
+                    <a href="https://github.com/refanbanzhang/three-finger-middle/releases/latest/download/ThreeFingerMiddle.dmg" class="download-btn">下载 ThreeFingerMiddle.dmg</a>
+                    <p style="margin-top: 15px; color: #666;">或访问 <a href="https://github.com/refanbanzhang/three-finger-middle/releases" style="color: #667eea;">Releases 页面</a> 查看所有版本</p>
+                </div>
+
+                <div class="section">
+                    <h2>开源</h2>
+                    <p>ThreeFingerMiddle 是一个开源项目，你可以在 <a href="https://github.com/refanbanzhang/three-finger-middle" style="color: #667eea;">GitHub</a> 上查看源代码、提交问题或参与贡献。</p>
+                </div>
+            </div>
+
+            <!-- English Content -->
+            <div class="lang-content" id="en-content">
+                <div class="section">
+                    <h2>Why ThreeFingerMiddle?</h2>
+                    <p>I loved Windows' three-finger light tap that simulates a middle mouse click—so handy for closing browser tabs, opening links in new tabs. When I switched to macOS, I missed that convenient gesture.</p>
+                    <p>So ThreeFingerMiddle was born. It brings that useful gesture to the macOS trackpad: <strong>three-finger tap</strong> triggers a <strong>middle click</strong>. Lightweight, local, ready to use.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Features</h2>
+                    <ul>
+                        <li>✨ Simple & Intuitive: Three-finger tap to simulate middle click</li>
+                        <li>🪶 Lightweight: Runs locally with minimal system resources</li>
+                        <li>🔒 Privacy & Security: No network access, no data collection</li>
+                        <li>🎯 Precise: Triggers middle click at current cursor position</li>
+                        <li>🚀 Ready to Use: Works right after installation</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>How to Install?</h2>
+                    <p><strong>System Requirements:</strong> macOS 13.0 or later</p>
+                    <ul>
+                        <li>1. Click the button below to download the DMG installer</li>
+                        <li>2. Double-click to open the DMG file</li>
+                        <li>3. Drag ThreeFingerMiddle to your Applications folder</li>
+                        <li>4. On first launch, the system will request Accessibility permission</li>
+                        <li>5. Go to System Preferences → Privacy & Security → Accessibility, and enable ThreeFingerMiddle</li>
+                        <li>6. Done! Now you can use three-finger tap to trigger middle clicks</li>
+                    </ul>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Download Now</h2>
+                    <a href="https://github.com/refanbanzhang/three-finger-middle/releases/latest/download/ThreeFingerMiddle.dmg" class="download-btn">Download ThreeFingerMiddle.dmg</a>
+                    <p style="margin-top: 15px; color: #666;">Or visit the <a href="https://github.com/refanbanzhang/three-finger-middle/releases" style="color: #667eea;">Releases page</a> to view all versions</p>
+                </div>
+
+                <div class="section">
+                    <h2>Open Source</h2>
+                    <p>ThreeFingerMiddle is an open-source project. You can view the source code, submit issues, or contribute on <a href="https://github.com/refanbanzhang/three-finger-middle" style="color: #667eea;">GitHub</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/refanbanzhang">refanbanzhang</a></p>
+            <p><a href="https://github.com/refanbanzhang/three-finger-middle">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(lang + '-content').classList.add('active');
+            event.target.classList.add('active');
+            
+            const taglines = {
+                'zh': '三指轻点，模拟中键',
+                'en': 'Three-finger tap, middle click'
+            };
+            document.getElementById('tagline').textContent = taglines[lang];
+        }
+    </script>
+</body>
+</html>
